@@ -857,9 +857,10 @@ ul {
 }
 
 .icon-send {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+    /* display: flex; */
+    /* align-items: baseline; */
+    justify-content: center;
+    
     fill: var(--color-text-secondary);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -876,6 +877,7 @@ ul {
 
 textarea {
     resize: none;
+    outline: none;
 }
 
 .form-mail {
@@ -923,18 +925,28 @@ textarea {
     padding: 10px 42px;
     border: 1px solid var(--text);
     border-radius: 4px;
+    outline: none;
 }
 
-.form-mail-field input:focus {
+.form-mail-field input:focus,
+.form-mail-field input:hover
+/* .form-mail-field input:not(:placeholder-shown)  */
+{
     border: 1px solid var(--link-color);
     fill: var(--link-color);
-        border: 1px solid var(--link-color);
-        border-radius: 4px;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--link-color);
+    border-radius: 4px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-mail-field input:focus::placeholder{
     color: var(--link-color) ;
+    fill: var(--link-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-mail-field input:focus::placeholder {
+    color: var(--link-color);
     fill: var(--link-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
