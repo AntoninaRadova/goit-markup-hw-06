@@ -186,6 +186,7 @@ ul {
 }
 
 .section-activity {
+    padding-top: 94px;
     padding-bottom: 94px;
 }
 
@@ -844,14 +845,14 @@ ul {
 }
 
 .form-right {
-     /* text-align: right; */
+    display: flex;
+    align-items: center;
     padding-left: 93px;
 }
 
-.button-right {
-    display: flex;
-    align-items: center;
-    padding-left: 12px;
+.form-button {
+    margin-top: 48px;
+    margin-bottom: 34px;
 }
 
 .icon-send {
