@@ -328,8 +328,8 @@ ul {
 
 .icon-customers.icon-social:hover,
 .icon-customers.icon-social:focus,
-.form-mail-field.icon-social:hover,
-.form-mail-field.icon-social:focus {
+.form-mail-field svg:hover,
+.form-mail-field svg:focus {
     fill: var(--link-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -655,26 +655,18 @@ ul {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-
     opacity: 1;
-
-    transition: opacity 250ms cubic-bezier(0.4,
-        0,
-        0.2,
-        1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
     position: absolute;
     top: 50%;
     left: 50%;
-
     min-height: 581px;
     min-width: 528px;
-
     background-color: var(--color-text-secondary);
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -859,6 +851,9 @@ ul {
 .form-button {
     margin-top: 48px;
     margin-bottom: 34px;
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
 .icon-send {
@@ -900,7 +895,7 @@ textarea {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-    background: #FFFFFF;
+    background: var(--color-text-secondary);
     border-radius: 4px;
 }
 
@@ -917,26 +912,31 @@ textarea {
     margin: 14px;
 }
 
-.form-mail-field svg:focus {
+/* .form-mail-field svg:focus {
     fill: var(--link-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 .form-mail-field input {
     border: none;
     margin: 0;
     padding: 10px 42px;
-    border: 1px solid #757575;
+    border: 1px solid var(--text);
     border-radius: 4px;
-    /* position: absolute; */
 }
 
 .form-mail-field input:focus {
-    border: 1px solid #2196F3;
+    border: 1px solid var(--link-color);
+    fill: var(--link-color);
+        border: 1px solid var(--link-color);
+        border-radius: 4px;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-mail-field input:focus::placeholder{
     color: var(--link-color) ;
+    fill: var(--link-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-text {
@@ -945,7 +945,7 @@ textarea {
     line-height: 1.1;
     text-align: center;
     letter-spacing: 0.03em;
-padding-bottom: 12px;
+    padding-bottom: 12px;
     color: #212121;
 }
 
@@ -966,7 +966,7 @@ padding-bottom: 12px;
     font-size: 14px;
     line-height: 1.7;    
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--text);
     margin-top: 20px;
     padding-bottom: 30px;
 }
