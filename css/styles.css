@@ -324,12 +324,15 @@ ul {
 }
 
 .icon-customers.icon-social:hover,
-.icon-customers.icon-social:focus {
+.icon-customers.icon-social:focus,
+.form-mail-field.icon-social:hover,
+.form-mail-field.icon-social:focus, {
     fill: var(--link-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-customers.icon-social {
+.icon-customers.icon-social,
+.form-mail-field.icon-social {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -702,8 +705,9 @@ ul {
 }
 
 .close-btn:hover {
-    background-color: var(--webstudio-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--color-text-secondary);
+    fill: var(--link-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -875,6 +879,7 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
+    height: 581px;
 }
 
 .form-mail-field {
@@ -887,7 +892,8 @@ textarea {
     line-height: 1.17;
     letter-spacing: 0.01em;
     background: #FFFFFF;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+     */
     border-radius: 4px;
 }
 
@@ -904,14 +910,14 @@ textarea {
 }
 
 .form-mail-field svg:focus {
-    fill: #2196F3;
+    fill: var(--link-color);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-mail-field input {
     border: none;
     margin: 0;
-    padding: 10px 20px;
+    padding: 10px 42px;
     border: 1px solid #757575;
     border-radius: 4px;
     /* position: absolute; */
@@ -922,7 +928,7 @@ textarea {
 }
 
 .form-mail-fieldt input:focus::placeholder{
-    color: #2196F3;
+    color: var(--link-color) ;
 }
 
 .form-text {
@@ -954,4 +960,13 @@ padding: 12px;
     letter-spacing: 0.03em;
     color: #757575;
     padding-bottom: 30px;
+}
+
+.policy a {
+    color: var(--link-color);
+}
+
+.form-mail .hero-button {
+    display: block;
+    margin: auto;
 }
