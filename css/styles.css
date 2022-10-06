@@ -984,6 +984,10 @@ textarea {
     margin: auto;
 }
 
+.form-field .hero-button {
+    fill: var(--color-text-secondary);
+}
+
 .form-field-input {
     position: relative;
 }
